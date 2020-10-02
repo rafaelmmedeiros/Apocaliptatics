@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FieldManager : MonoBehaviour
+public class BattleController : MonoBehaviour
 {
     void Start()
     {
-
     }
 
+    // Update is called once per frame
     void Update()
     {
-
+        
     }
 }
