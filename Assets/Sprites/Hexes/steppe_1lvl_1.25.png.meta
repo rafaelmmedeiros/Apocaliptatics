@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: -5458906261791507518
     second: steppe_1lvl_1.25_0
+  - first:
+      213: -6449391198218785552
+    second: steppe_1lvl_1.25_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -128,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cbf2cb6da11e34b0800000000000000
-      internalID: -5458906261791507518
+      spriteID: 0fc63a420e82f76a0800000000000000
+      internalID: -6449391198218785552
       vertices: []
       indices: 
       edges: []
