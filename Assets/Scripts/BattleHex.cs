@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BattleHex : MonoBehaviour
 {
-    [SerializeField] int horizontalCoordinate;
-    [SerializeField] int verticalCoordinate;
+    public int horizontalCoordinate;
+    public int verticalCoordinate;
 
     void Start()
     {
