@@ -23,16 +23,21 @@ public class NeighboursFinder : MonoBehaviour
         int initialX = startingHex.horizontalCoordinate - 1;
         int initialY = startingHex.verticalCoordinate - 1;
 
-        allNeighbours.Add(allHexesArray[initialX + 1, initialY]);
-        allNeighbours.Add(allHexesArray[initialX - 1, initialY]);
-        allNeighbours.Add(allHexesArray[initialX, initialY + 1]);
-        allNeighbours.Add(allHexesArray[initialX, initialY - 1]);
-        allNeighbours.Add(allHexesArray[initialX + 1, initialY + 1]);
-        allNeighbours.Add(allHexesArray[initialX - 1, initialY - 1]);
+        for (int x = -1; x <= 1; x++)
+        {
+            for (int y = -1; y <= 1; y++)
+            {
+                if (x + y != 0
+                    && allHexesArray[initialX + x, initialY + y].battleHexState == HexState.active)
+                {
+                    allNeighbours.Add(allHexesArray[initialX + x, initialY + y]);
+                }
+            }
+        }
 
         foreach (BattleHex hex in allNeighbours)
         {
-            hex.landscape.color = new Color32(255, 180, 200, 255);
+            hex.landscape.color = new Color32(180, 180, 200, 255);
         }
     }
 }
