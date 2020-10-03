@@ -12,6 +12,7 @@ public class BattleHex : MonoBehaviour
     public HexState battleHexState;
     public bool isSecondLevel = false;
     public Image landscape;
+    public bool isStartingHex = false;
 
     void Start()
     {

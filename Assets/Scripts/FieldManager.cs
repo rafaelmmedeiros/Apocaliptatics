@@ -7,7 +7,9 @@ public class FieldManager : MonoBehaviour
     public RowManager[] allRows;
     public BattleHex[,] allHexesArray;
     int allRowsLenght;
-    void Start()
+    List<BattleHex> activeHexList = new List<BattleHex>();
+
+    void Awake()
     {
         allRows = GetComponentsInChildren<RowManager>();
         allRowsLenght = allRows.Length;
@@ -18,7 +20,7 @@ public class FieldManager : MonoBehaviour
         }
 
         CreateAllHexesArray();
-        CreateActiveHexesArray();
+        IdentifyHexes();
     }
 
     private void CreateAllHexesArray()
@@ -37,7 +39,7 @@ public class FieldManager : MonoBehaviour
         }
     }
 
-    private void CreateActiveHexesArray()
+    private void IdentifyHexes()
     {
         foreach (BattleHex hex in allHexesArray)
         {
@@ -51,6 +53,21 @@ public class FieldManager : MonoBehaviour
                 hex.MakeActive();
             }
         }
+
+        CreateActiveHexList();
+    }
+
+    private void CreateActiveHexList()
+    {
+        foreach (BattleHex hex in allHexesArray)
+        {
+            if (hex.battleHexState == HexState.active)
+            {
+                activeHexList.Add(hex);
+            }
+        }
+
+        print(activeHexList.Count);
     }
 
 }

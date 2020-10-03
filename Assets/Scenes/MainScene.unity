@@ -15971,7 +15971,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1530019362}
     m_Modifications:
     - target: {fileID: 586766907233271371, guid: e59f31b68d51f6c4b8eaebd3c9b084ed,
         type: 3}
@@ -16016,7 +16016,7 @@ PrefabInstance:
     - target: {fileID: 9075815654099634479, guid: e59f31b68d51f6c4b8eaebd3c9b084ed,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9075815654099634479, guid: e59f31b68d51f6c4b8eaebd3c9b084ed,
         type: 3}
@@ -16036,12 +16036,12 @@ PrefabInstance:
     - target: {fileID: 9075815654099634479, guid: e59f31b68d51f6c4b8eaebd3c9b084ed,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -409
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9075815654099634479, guid: e59f31b68d51f6c4b8eaebd3c9b084ed,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -227
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9075815654099634479, guid: e59f31b68d51f6c4b8eaebd3c9b084ed,
         type: 3}
@@ -16082,6 +16082,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9075815654099634479, guid: e59f31b68d51f6c4b8eaebd3c9b084ed,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9075815654099634479, guid: e59f31b68d51f6c4b8eaebd3c9b084ed,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9075815654099634479, guid: e59f31b68d51f6c4b8eaebd3c9b084ed,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e59f31b68d51f6c4b8eaebd3c9b084ed, type: 3}
