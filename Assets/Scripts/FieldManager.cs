@@ -18,6 +18,7 @@ public class FieldManager : MonoBehaviour
         }
 
         CreateAllHexesArray();
+        CreateActiveHexesArray();
     }
 
     private void CreateAllHexesArray()
@@ -32,6 +33,22 @@ public class FieldManager : MonoBehaviour
                 allHexesArray[j, i] = allRows[heightOfArray - i - 1].allHexesInRow[widthOfArray - j - 1];
                 allHexesArray[j, i].verticalCoordinate = i + 1;
                 allHexesArray[j, i].horizontalCoordinate = j + 1;
+            }
+        }
+    }
+
+    private void CreateActiveHexesArray()
+    {
+        foreach (BattleHex hex in allHexesArray)
+        {
+            if (Mathf.Abs(hex.transform.position.x) > 409 |
+                Mathf.Abs(hex.transform.position.y) > 220)
+            {
+                hex.MakeInactive();
+            }
+            else
+            {
+                hex.MakeActive();
             }
         }
     }
