@@ -161,9 +161,9 @@ GameObject:
   - component: {fileID: 5337993170887115420}
   - component: {fileID: 5337993170887115422}
   - component: {fileID: 5337993170887115421}
-  - component: {fileID: 5337993170887115423}
+  - component: {fileID: 6431385769477708280}
   m_Layer: 5
-  m_Name: Swamp
+  m_Name: Hospital
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5337993170887115423
+--- !u!114 &6431385769477708280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,11 +237,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5337993170887115411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7439127ff76f8e47a56464365599e50, type: 3}
+  m_Script: {fileID: 11500000, guid: 43b8a1c8461ae9e498b550554f3fc838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalCoordinate: 0
   verticalCoordinate: 0
+  battleHexState: 0
+  isSecondLevel: 0
+  landscape: {fileID: 8745041839498171949}
 --- !u!1 &7744014908549151403
 GameObject:
   m_ObjectHideFlags: 0

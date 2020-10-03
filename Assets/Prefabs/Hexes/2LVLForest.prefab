@@ -242,6 +242,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalCoordinate: 0
   verticalCoordinate: 0
+  battleHexState: 0
+  isSecondLevel: 1
+  landscape: {fileID: 8745041839498171949}
 --- !u!1 &7744014908549151403
 GameObject:
   m_ObjectHideFlags: 0

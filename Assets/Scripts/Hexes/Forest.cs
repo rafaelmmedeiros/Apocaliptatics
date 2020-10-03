@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleHex : MonoBehaviour
+public class Forest : BattleHex
 {
-    public int horizontalCoordinate;
-    public int verticalCoordinate;
-
+    // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
+    // Update is called once per frame
     void Update()
     {
-
+        
     }
 }
