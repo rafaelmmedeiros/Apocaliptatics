@@ -12,9 +12,12 @@ public class BattleHex : MonoBehaviour
     public HexState battleHexState;
     public bool isSecondLevel = false;
     public Image landscape;
+    [SerializeField] Image currentState;
     public bool isStartingHex = false;
+    public bool isNeighbourgHex = false;
+    public bool isIncluded = false;
 
-    void Start()
+    private void Awake()
     {
 
     }
@@ -35,5 +38,10 @@ public class BattleHex : MonoBehaviour
         {
             landscape.color = new Color32(170, 170, 170, 255);
         }
+    }
+
+    public void MakeAvailable()
+    {
+        currentState.color = new Color32(255, 255, 255, 220);
     }
 }

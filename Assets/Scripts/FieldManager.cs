@@ -5,9 +5,9 @@ using UnityEngine;
 public class FieldManager : MonoBehaviour
 {
     public RowManager[] allRows;
-    public BattleHex[,] allHexesArray;
+    static public BattleHex[,] allHexesArray;
     int allRowsLenght;
-    List<BattleHex> activeHexList = new List<BattleHex>();
+    static List<BattleHex> activeHexList = new List<BattleHex>();
 
     void Awake()
     {
@@ -21,6 +21,13 @@ public class FieldManager : MonoBehaviour
 
         CreateAllHexesArray();
         IdentifyHexes();
+    }
+
+    private void Start()
+    {
+        IdentifyHexes();
+        AvailablePosition hero = FindObjectOfType<AvailablePosition>();
+        hero.GetAvailablePositions(hero.GetComponentInParent<BattleHex>(), 4);
     }
 
     private void CreateAllHexesArray()
@@ -66,8 +73,6 @@ public class FieldManager : MonoBehaviour
                 activeHexList.Add(hex);
             }
         }
-
-        print(activeHexList.Count);
     }
 
 }
