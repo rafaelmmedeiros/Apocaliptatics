@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 5337993170887115422}
   - component: {fileID: 5337993170887115421}
   - component: {fileID: 6431385769477708280}
+  - component: {fileID: -7394371926167511672}
   m_Layer: 5
   m_Name: Hospital
   m_TagString: Untagged
@@ -247,6 +248,20 @@ MonoBehaviour:
   landscape: {fileID: 8745041839498171949}
   currentState: {fileID: 6008768575983794944}
   isStartingHex: 0
+  isNeighbourgHex: 0
+  isIncluded: 0
+--- !u!114 &-7394371926167511672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5337993170887115411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0636967b451ef84696a8d5a408edc4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7744014908549151403
 GameObject:
   m_ObjectHideFlags: 0
