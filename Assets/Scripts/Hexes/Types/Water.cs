@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Water : BattleHex
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void MakeTargetToMove()
     {
-        
+        clickOnMe.ClearPreviousSelectionOfTargetHex();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void MakeAvailable()
     {
-        
+        currentState.color = new Color32(255, 255, 255, 0);
     }
 }

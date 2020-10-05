@@ -13,7 +13,7 @@ public class BattleHex : MonoBehaviour
     public bool isSecondLevel = false;
     public ClickOnMe clickOnMe;
     public Image landscape;
-    [SerializeField] Image currentState;
+    [SerializeField] protected Image currentState;
     public bool isStartingHex = false;
     public bool isNeighbourgHex = false;
     public bool isIncluded = false;
@@ -41,13 +41,13 @@ public class BattleHex : MonoBehaviour
         }
     }
 
-    public void MakeAvailable()
+    public virtual void MakeAvailable()
     {
         currentState.sprite = clickOnMe.fieldManager.availableToMove;
         currentState.color = new Color32(255, 255, 255, 220);
     }
 
-    public void MakeTargetToMove()
+    public virtual void MakeTargetToMove()
     {
         clickOnMe.isTargetHex = true;
         currentState.sprite = clickOnMe.fieldManager.availableAsTarget;
