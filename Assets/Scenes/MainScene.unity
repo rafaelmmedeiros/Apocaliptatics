@@ -26649,6 +26649,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allRows: []
+  availableAsTarget: {fileID: 5347300045816152088, guid: 411637cf2dd1c3c46b73a006ff9a65a4,
+    type: 3}
+  notAvailable: {fileID: -2086669485149283146, guid: ff4fcc2537814214d9cb843df846b7f0,
+    type: 3}
+  availableToMove: {fileID: 800426805531165941, guid: eb8ef87ad73a6d64aa15b7ec502b3916,
+    type: 3}
 --- !u!1001 &1427678082
 PrefabInstance:
   m_ObjectHideFlags: 0

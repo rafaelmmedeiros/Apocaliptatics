@@ -6,19 +6,18 @@ public class AvailablePosition : MonoBehaviour
 {
     private int step;
     List<BattleHex> initialHexes = new List<BattleHex>();
-    PositionsForFlying AdjFinder = new PositionsForFlying();
 
-    public void GetAvailablePositions(BattleHex startingHex, int stepsLimit)
+    public void GetAvailablePositions(BattleHex startingHex, int stepsLimit, IAdjacentFinder adjacentFinder)
     {
 
-        AdjFinder.GetAdjacentHexesExtended(startingHex);
+        adjacentFinder.GetAdjacentHexesExtended(startingHex);
 
         for (step = 2; step <= stepsLimit; step++)
         {
             initialHexes = GetNewInitialHexes();
             foreach (BattleHex hex in initialHexes)
             {
-                AdjFinder.GetAdjacentHexesExtended(hex);
+                adjacentFinder.GetAdjacentHexesExtended(hex);
                 hex.isIncluded = true;
             }
         }
