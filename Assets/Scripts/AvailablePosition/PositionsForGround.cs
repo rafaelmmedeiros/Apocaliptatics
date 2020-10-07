@@ -24,7 +24,7 @@ public class PositionsForGround : MonoBehaviour,
         foreach (BattleHex hex in neighboursToCkeck)
         {
             hex.isNeighbourgHex = true;
-            print("GROUND");
+            hex.distanceText.SetDistanceFromStartingHex(initialHex);
         }
     }
 }

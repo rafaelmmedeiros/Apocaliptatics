@@ -13,6 +13,8 @@ public class BattleHex : MonoBehaviour
     public bool isSecondLevel = false;
     public ClickOnMe clickOnMe;
     public Image landscape;
+    public Distance distanceText;
+    public DeploymentPosition DeploymentPosition;
     [SerializeField] protected Image currentState;
     public bool isStartingHex = false;
     public bool isNeighbourgHex = false;

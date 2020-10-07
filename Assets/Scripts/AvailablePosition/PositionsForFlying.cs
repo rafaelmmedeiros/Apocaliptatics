@@ -24,7 +24,7 @@ public class PositionsForFlying : MonoBehaviour,
         foreach (BattleHex hex in neighboursToCkeck)
         {
             hex.isNeighbourgHex = true;
-            print("FLYING");
+            hex.distanceText.SetDistanceFromStartingHex(initialHex);
         }
     }
 }
