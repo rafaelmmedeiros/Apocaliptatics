@@ -54,4 +54,10 @@ public class BattleHex : MonoBehaviour
         clickOnMe.isTargetHex = true;
         currentState.sprite = clickOnMe.fieldManager.availableAsTarget;
     }
+
+    public void DefineAsStartingHex()
+    {
+        isStartingHex = true;
+        distanceText.stepsToGo = 1;
+    }
 }
