@@ -52,6 +52,7 @@ public class BattleHex : MonoBehaviour
     public virtual void MakeTargetToMove()
     {
         clickOnMe.isTargetHex = true;
+        BattleController.targetToMove = this;
         currentState.sprite = clickOnMe.fieldManager.availableAsTarget;
     }
 

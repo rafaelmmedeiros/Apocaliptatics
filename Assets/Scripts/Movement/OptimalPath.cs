@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class OptimalPath : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static List<BattleHex> optimalPath = new List<BattleHex>();
+    public static BattleHex nextStep;
+    BattleHex targetHex;
+    IAdjacentFinder AdjacentOption = new PosForPath();
 
-    // Update is called once per frame
-    void Update()
+    internal void MatchPath()
     {
-        
+        targetHex = BattleController.targetToMove;
+        optimalPath.Add(targetHex);
+
+        int steps = targetHex.distanceText.distanceFromStartingPosition;
+        for (int i = steps; i > 1;)
+        {
+            AdjacentOption.GetAdjacentHexesExtended(targetHex);
+            targetHex = nextStep;
+            i -= nextStep.distanceText.MakeMePartOfOptimalPath();
+        }
     }
 }

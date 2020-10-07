@@ -2,17 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IsOptimalPath : MonoBehaviour
+public class IsOptimalPath : MonoBehaviour,
+    IEvaluateHex
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool EvaluateHex(BattleHex evaluatedHex)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return evaluatedHex.isNeighbourgHex;
     }
 }

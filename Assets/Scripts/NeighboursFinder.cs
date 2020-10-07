@@ -12,7 +12,7 @@ public class NeighboursFinder : MonoBehaviour
     {
     }
 
-    static public List<BattleHex> GetAdjacentHexes(BattleHex startingHex)
+    static public List<BattleHex> GetAdjacentHexes(BattleHex startingHex, IEvaluateHex checkHex)
     {
         allNeighbours.Clear();
         int initialX = startingHex.horizontalCoordinate - 1;
@@ -23,9 +23,7 @@ public class NeighboursFinder : MonoBehaviour
             for (int y = -1; y <= 1; y++)
             {
                 if (x + y != 0
-                     && EvaluateIfItIsNewHex(FieldManager.allHexesArray[initialX + x, initialY + y])
-                     && FieldManager.allHexesArray[initialX + x, initialY + y].battleHexState
-                       == HexState.active)
+                     && checkHex.EvaluateHex(FieldManager.allHexesArray[initialX + x, initialY + y])) //exclude inactive hexes                       
                 {
                     allNeighbours.Add(FieldManager.allHexesArray[initialX + x, initialY + y]);
                     FieldManager.allHexesArray[initialX + x, initialY + y].MakeAvailable();
@@ -33,13 +31,5 @@ public class NeighboursFinder : MonoBehaviour
             }
         }
         return allNeighbours;
-    }
-
-    private static bool EvaluateIfItIsNewHex(BattleHex evaluatedHex)
-    {
-        return evaluatedHex.battleHexState
-            == HexState.active
-            && !evaluatedHex.isStartingHex
-            && !evaluatedHex.isNeighbourgHex;
     }
 }

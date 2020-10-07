@@ -2,24 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PositionsForFlying : MonoBehaviour,
+public class PositionsForFlying :
     IAdjacentFinder
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    IEvaluateHex checkHex = new IsNewHex();
 
     public void GetAdjacentHexesExtended(BattleHex initialHex)
     {
-        List<BattleHex> neighboursToCkeck = NeighboursFinder.GetAdjacentHexes(initialHex);
+        List<BattleHex> neighboursToCkeck = NeighboursFinder.GetAdjacentHexes(initialHex, checkHex);
 
         foreach (BattleHex hex in neighboursToCkeck)
         {

@@ -8,8 +8,6 @@ public class FieldManager : MonoBehaviour
     static public BattleHex[,] allHexesArray;
     int allRowsLenght;
     public static List<BattleHex> activeHexList = new List<BattleHex>();
-
-    //  Sprites for 
     public Sprite availableAsTarget;
     public Sprite notAvailable;
     public Sprite availableToMove;

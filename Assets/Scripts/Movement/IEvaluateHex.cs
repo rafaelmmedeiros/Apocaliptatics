@@ -2,17 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IEvaluateHex : MonoBehaviour
+public interface IEvaluateHex
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    bool EvaluateHex(BattleHex evaluatedHex);
 }

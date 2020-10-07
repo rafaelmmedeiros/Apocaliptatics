@@ -26,8 +26,8 @@ public class ClickOnMe : MonoBehaviour, IPointerClickHandler
         ClearPreviousSelectionOfTargetHex();
         if (hex.isNeighbourgHex)
         {
-            print("INTERFACE");
             hex.MakeTargetToMove();
+            BattleController.currentAtacker.GetComponent<OptimalPath>().MatchPath();
         }
     }
 

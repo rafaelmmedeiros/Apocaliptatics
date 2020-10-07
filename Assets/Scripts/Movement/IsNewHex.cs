@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IsNewHex : MonoBehaviour
+public class IsNewHex : MonoBehaviour,
+    IEvaluateHex
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool EvaluateHex(BattleHex evaluatedHex)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return evaluatedHex.battleHexState
+                    == HexState.active
+                    && !evaluatedHex.isStartingHex
+                    && !evaluatedHex.isNeighbourgHex;
     }
 }
