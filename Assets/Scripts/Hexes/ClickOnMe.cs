@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ClickOnMe : MonoBehaviour, 
+public class ClickOnMe : MonoBehaviour,
     IPointerClickHandler
 {
     BattleHex hex;
@@ -52,6 +52,7 @@ public class ClickOnMe : MonoBehaviour,
                 hex.GetComponent<ClickOnMe>().isTargetToMove = false;
                 hex.MakeAvailable();
             }
+            hex.landscape.color = new Color32(255, 255, 255, 255);
 
         }
     }

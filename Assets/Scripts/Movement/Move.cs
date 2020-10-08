@@ -12,9 +12,13 @@ public class Move : MonoBehaviour
     private int currentStep;
     Vector3 targetPos;
     float speedOfAnim = 80f;
+    internal bool lookingToTheRight = true;
+    SpriteRenderer heroSprite;
+
     void Start()
     {
         hero = GetComponent<Hero>();
+        heroSprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -24,6 +28,7 @@ public class Move : MonoBehaviour
             HeroIsMoving();
         }
     }
+
     public void StartsMoving()
     {
         currentStep = 0;
@@ -32,12 +37,16 @@ public class Move : MonoBehaviour
         hero.GetComponent<Animator>().SetBool("IsMoving", true);
         ResetTargetPos();
     }
+
     private void ResetTargetPos()
     {
         targetPos = new Vector3(path[currentStep].transform.position.x,
                                 path[currentStep].transform.position.y,
                                 transform.position.z);
+
+        ControlDirection(targetPos);
     }
+
     private void HeroIsMoving()
     {
         transform.position = Vector3.MoveTowards(
@@ -62,9 +71,20 @@ public class Move : MonoBehaviour
             StopsMoving();
         }
     }
+
     private void StopsMoving()
     {
         isMoving = !isMoving;
         hero.GetComponent<Animator>().SetBool("IsMoving", false);
+    }
+
+    internal void ControlDirection(Vector3 targetPos)
+    {
+        if (transform.position.x > targetPos.x && lookingToTheRight ||
+            transform.position.x < targetPos.x && !lookingToTheRight)
+        {
+            heroSprite.flipX = !heroSprite.flipX;
+            lookingToTheRight = !lookingToTheRight;
+        }
     }
 }

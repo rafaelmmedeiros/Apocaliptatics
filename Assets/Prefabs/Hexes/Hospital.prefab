@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0636967b451ef84696a8d5a408edc4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTargetHex: 0
+  isTargetToMove: 0
   fieldManager: {fileID: 0}
 --- !u!1001 &867670471758898375
 PrefabInstance:
