@@ -15,6 +15,7 @@ public class PositionsForFlying :
         {
             hex.isNeighbourgHex = true;
             hex.distanceText.SetDistanceFromStartingHex(initialHex);
+            hex.MakeAvailable();
         }
     }
 }

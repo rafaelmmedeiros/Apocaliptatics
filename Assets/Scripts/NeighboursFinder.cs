@@ -26,7 +26,6 @@ public class NeighboursFinder : MonoBehaviour
                      && checkHex.EvaluateHex(FieldManager.allHexesArray[initialX + x, initialY + y])) //exclude inactive hexes                       
                 {
                     allNeighbours.Add(FieldManager.allHexesArray[initialX + x, initialY + y]);
-                    FieldManager.allHexesArray[initialX + x, initialY + y].MakeAvailable();
                 }
             }
         }

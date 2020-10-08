@@ -33,7 +33,7 @@ public class FieldManager : MonoBehaviour
         IAdjacentFinder adjFinder = new PositionsForFlying();
         BattleHex startigHex = hero.GetComponentInParent<BattleHex>();
         startigHex.DefineAsStartingHex();
-        hero.GetAvailablePositions(hero.GetComponentInParent<BattleHex>(), 3, adjFinder);
+        hero.GetAvailablePositions(hero.GetComponentInParent<BattleHex>(), 4, adjFinder);
     }
 
     private void CreateAllHexesArray()

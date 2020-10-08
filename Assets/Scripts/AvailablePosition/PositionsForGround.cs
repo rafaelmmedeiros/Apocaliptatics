@@ -15,6 +15,7 @@ public class PositionsForGround :
         {
             hex.isNeighbourgHex = true;
             hex.distanceText.SetDistanceFromStartingHex(initialHex);
+            hex.MakeAvailable();
         }
     }
 }

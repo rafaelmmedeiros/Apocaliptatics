@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ClickOnMe : MonoBehaviour, IPointerClickHandler
+public class ClickOnMe : MonoBehaviour, 
+    IPointerClickHandler
 {
     BattleHex hex;
-    public bool isTargetHex = false;
+    public bool isTargetToMove = false;
     public FieldManager fieldManager;
 
     void Awake()
@@ -20,8 +21,19 @@ public class ClickOnMe : MonoBehaviour, IPointerClickHandler
 
     }
 
-    // INTERFACE IMPLEMENTATIONS
     public void OnPointerClick(PointerEventData eventData)
+    {
+        if (!isTargetToMove)
+        {
+            SelectTargetToMove();
+        }
+        else
+        {
+            BattleController.currentAtacker.GetComponent<Move>().StartsMoving();
+        }
+    }
+
+    private void SelectTargetToMove()
     {
         ClearPreviousSelectionOfTargetHex();
         if (hex.isNeighbourgHex)
@@ -35,9 +47,9 @@ public class ClickOnMe : MonoBehaviour, IPointerClickHandler
     {
         foreach (BattleHex hex in FieldManager.activeHexList)
         {
-            if (hex.clickOnMe.isTargetHex == true)
+            if (hex.clickOnMe.isTargetToMove == true)
             {
-                hex.GetComponent<ClickOnMe>().isTargetHex = false;
+                hex.GetComponent<ClickOnMe>().isTargetToMove = false;
                 hex.MakeAvailable();
             }
 
