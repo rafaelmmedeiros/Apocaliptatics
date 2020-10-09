@@ -58,7 +58,13 @@ public class BattleHex : MonoBehaviour
 
     public void DefineAsStartingHex()
     {
+        distanceText.distanceFromStartingPosition = 0;
         isStartingHex = true;
         distanceText.stepsToGo = 1;
+    }
+
+    public virtual bool AvailableToGround()
+    {
+        return true;
     }
 }

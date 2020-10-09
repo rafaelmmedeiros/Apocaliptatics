@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47fa4b95357e13647ac2a84282900a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 2
+  velocity: 5
 --- !u!114 &5759562494780926622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5c7fc18782342409e7622fa4fbff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  landscapes: []
 --- !u!114 &6422874348642051913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,3 +140,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 522b578dd4baf9443a6b9988fbd0eac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMoving: 0
+  path: []

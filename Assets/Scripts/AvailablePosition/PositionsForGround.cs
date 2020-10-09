@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PositionsForGround :
+public class PositionsForGround : MonoBehaviour,
     IAdjacentFinder
 {
-    IEvaluateHex checkHex = new IsNewHex();
+    IEvaluateHex checkHex = new IsNewGround();
 
     public void GetAdjacentHexesExtended(BattleHex initialHex)
     {
@@ -13,9 +13,12 @@ public class PositionsForGround :
 
         foreach (BattleHex hex in neighboursToCkeck)
         {
-            hex.isNeighbourgHex = true;
-            hex.distanceText.SetDistanceFromStartingHex(initialHex);
-            hex.MakeAvailable();
+            if (hex.distanceText.EvaluateDistanceForGround(initialHex))
+            {
+                hex.isNeighbourgHex = true;
+                hex.distanceText.SetDistanceFofGroundUnit(initialHex);
+                hex.MakeAvailable();
+            }
         }
     }
 }

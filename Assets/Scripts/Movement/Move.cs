@@ -49,10 +49,8 @@ public class Move : MonoBehaviour
 
     private void HeroIsMoving()
     {
-        transform.position = Vector3.MoveTowards(
-                                    transform.position,
-                                    targetPos,
-                                    speedOfAnim * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPos,
+                        speedOfAnim * Time.deltaTime);
         ManageSteps();
     }
 

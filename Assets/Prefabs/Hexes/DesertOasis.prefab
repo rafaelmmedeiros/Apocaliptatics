@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0636967b451ef84696a8d5a408edc4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTargetHex: 0
+  isTargetToMove: 0
   fieldManager: {fileID: 0}
 --- !u!1001 &48453295956690817
 PrefabInstance:
@@ -351,6 +351,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939518696095713506, guid: 3b9b0787f2f37d04ba5fb96a7facd252,
+        type: 3}
+      propertyPath: stepsToGo
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b9b0787f2f37d04ba5fb96a7facd252, type: 3}
