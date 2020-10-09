@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hero : MonoBehaviour
+public abstract class Hero : MonoBehaviour
 {
     public int velocity = 2;
+
+    public abstract void DealsDamage(BattleHex target);
 }
