@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IsOptimalPath : MonoBehaviour,
+public class IsOptimalPath :
     IEvaluateHex
 {
     public bool EvaluateHex(BattleHex evaluatedHex)

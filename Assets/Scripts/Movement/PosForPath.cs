@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PosForPath : 
+public class PosForPath :
     IAdjacentFinder
 {
     IEvaluateHex checkHex = new IsOptimalPath();
