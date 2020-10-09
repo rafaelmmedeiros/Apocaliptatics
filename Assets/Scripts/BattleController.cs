@@ -12,8 +12,7 @@ public class BattleController : MonoBehaviour
         currentAtacker = FindObjectOfType<Hero>();
     }
 
-    void Update()
+    void Start()
     {
-
     }
 }
